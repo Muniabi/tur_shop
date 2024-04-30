@@ -1,0 +1,26 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	padding: 0px 0px;
+	font-size: 18px;
+	color: $mainColor;
+	font-weight: 500px;
+	text-align: center;
+	padding-block: 12px;
+	padding-inline: 24px;
+	background: $mainDarkColor;
+	border-radius: 8px;
+	transition: .5s ease;
+	@media (any-hover: hover) {
+		&:hover {
+			cursor: pointer;
+			color: $colorAccent;
+			transform: scale(1.02);
+			box-shadow: 0px 4px 25px $mainDarkColor;
+		}
+	}
+	&--fw {
+		width: 100%;
+	}
+}
