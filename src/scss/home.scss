@@ -269,7 +269,7 @@
     
     &__title {
         color: #2F323A;
-        font-size: 34px;
+        font-size: 2.36vw;
         font-weight: 600;
         @media (max-width: 900px) {
             font-size: 26px;
@@ -302,7 +302,7 @@
     &__title {
         color: #2F323A;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 600;
         text-align: center;
         margin: 12px 12px 16px 12px;
     }
@@ -324,5 +324,147 @@ span {
 
 
 
+.page__popular-products {
 
-//====================================================================================================
+}
+
+.popular-products {
+    padding-bottom: 80px;
+
+    &__main {
+        display: flex;
+        flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+        gap: 16px; /* Промежуток между элементами */
+        justify-content: space-evenly; /* Распределение элементов по ширине контейнера */
+        
+        @media (max-width: 900px) {
+            justify-content: center; /* Центрируем элементы по горизонтали при ширине экрана меньше 900px */
+        }
+    }
+
+    &__card {
+        flex: 1 1 calc(50% - 10px); /* Устанавливаем ширину карточки для двух колонок */
+        max-width: 278px;
+        color: #2F323A;
+        border: 1px solid #E8E9EA;
+        border-radius: 8px;
+        transition: .3s ease;
+        
+        &:hover {
+            border: 1px solid $mainDarkColor;
+            // scale: 1.02;
+        }
+        
+        @media (max-width: 900px) {
+            flex: 1 1 calc(100% - 20px); /* Устанавливаем ширину карточки на одну колонку */
+        }
+
+        // Добавляем выравнивание элементов внутри карточки
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__container {
+        /* Ваши стили для контейнера */
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin: 16px;
+        line-height: 1.5;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center; /* Выравнивание по горизонтали */
+        align-items: center; /* Выравнивание по вертикали */
+        margin-block: 16px;
+    }
+
+    &__title {
+        color: #2F323A;
+        font-size: 34px;
+        font-weight: 600;
+        
+        @media (max-width: 900px) {
+            font-size: 26px;
+        }
+    }
+
+    &__button {
+        font-size: 18px;
+        line-height: 1.36;
+        position: relative;
+        padding-right: 24px; // Добавляем отступ справа для размещения иконки
+        &::after {
+            content: '';
+            width: 24px;
+            height: 24px; // Добавляем высоту
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%); // Центрируем иконку по вертикали
+            background-image: url('/src/iconsfont/arrow.svg'); // Устанавливаем изображение как фон
+            background-repeat: no-repeat; // Запрещаем повторение фона
+            background-position: center; // Размещаем иконку по центру
+        }
+    }
+
+    .price {
+        margin-block: 12px 16px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .item-popular-products {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: 100%;
+
+        &__image {
+            align-content: center;
+            margin: 0 auto;
+            margin-bottom: 16px;
+            img {
+                max-width: 275px;
+                height: auto;
+                max-height: 228px;
+                transition: .4s ease;
+            }
+        }
+    }
+
+    .list-popular-products {
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-between; /* чтобы элементы внутри были распределены с равным пространством */
+        }
+
+        &__title {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.5;
+            padding-bottom: 40px;
+            transition: .2s ease;
+            &:hover {
+                color: $colorAccent;
+            }
+        }
+
+        &__button {
+            margin-top: 16px;
+            width: 100%; /* растягиваем кнопку на всю доступную ширину блока */
+            border-radius: 15px;
+            align-self: flex-end; /* перемещаем кнопку вниз блока */
+        }
+    }
+}
+
+
+//====================================================================================================//

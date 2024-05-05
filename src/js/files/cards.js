@@ -155,3 +155,136 @@ categories.forEach(category => {
     const categoryCard = createCategoryCard(category.title, category.imageSrc);
     categoryContainer.appendChild(categoryCard);
 });
+
+
+
+// ПОПУЛЯРНЫЕ ТОВАРЫ //
+
+// Функция для создания карточки товара в Популярных товарах
+function createPopularProductCard(imageSrc, title, price, alt) {
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("popular-products__card");
+
+    const imageDiv = document.createElement("div");
+    imageDiv.classList.add("item-popular-products__image");
+
+    const image = document.createElement("img");
+    image.src = imageSrc;
+    image.alt = alt;
+
+    const list = document.createElement("ul");
+    list.classList.add("popular-products__list", "list-popular-products");
+
+    const titleItem = document.createElement("li");
+    titleItem.classList.add("list-popular-products__item");
+    const titleLink = document.createElement("a");
+    titleLink.href = "#";
+    titleLink.classList.add("list-popular-products__title");
+    titleLink.textContent = title;
+    titleItem.appendChild(titleLink);
+
+    const priceItem = document.createElement("li");
+    priceItem.classList.add("list-popular-products__item", "price");
+    priceItem.textContent = price;
+
+    const buttonLink = document.createElement("a");
+    buttonLink.href = "#";
+    buttonLink.classList.add("list-popular-products__button", "button");
+    buttonLink.textContent = "В корзину";
+
+    list.appendChild(titleItem);
+    list.appendChild(priceItem);
+    list.appendChild(buttonLink);
+
+    cardDiv.appendChild(imageDiv);
+    imageDiv.appendChild(image);
+    cardDiv.appendChild(list);
+
+    return cardDiv;
+}
+
+// Находим контейнер для карточек товаров
+const popularTovarcontainer = document.querySelector(".popular-products__main");
+
+// Создаем массив с данными для карточек товаров
+const popularProductsData = [
+    {
+        imageSrc: "./img/tovary/sheben20:40.png",
+        title: "Щебень 20/40 навал (10 тонн)",
+        price: "8 990 ₽",
+        alt: "0001"
+    },
+    {
+        imageSrc: "./img/tovary/sheben40:70.png",
+        title: "Щебень 40/70 навал (15 тонн)",
+        price: "12 750 ₽",
+        alt: "0002"
+    },
+    {
+        imageSrc: "./img/tovary/electrodAno-21.png",
+        title: "Электроды АНО-21",
+        price: "343 ₽",
+        alt: "0003"
+    },
+    {
+        imageSrc: "/img/tovary/gipsokartonVolma.png",
+        title: "Гипсокартон Волма, 2500 х 1200 х 12,5 мм",
+        price: "335 ₽",
+        alt: "0004"
+    },
+    {
+        imageSrc: "/img/tovary/profil.png",
+        title: "Профиль 0,55мм для гипсокартона",
+        price: "195 ₽",
+        alt: "0005"
+    },
+    {
+        imageSrc: "/img/tovary/gipsoKartonKnauf.png",
+        title: "Гипсокартон влагостойкий ГСП-Н2 КНАУФ ",
+        price: "557 ₽",
+        alt: "0006"
+    },
+    {
+        imageSrc: "/img/tovary/shtukaturkaKnauf.png",
+        title: "Кнауф Мп 75 штукатурка гипсовая МН 30к",
+        price: "380 ₽",
+        alt: "0007"
+    },
+    {
+        imageSrc: "/img/tovary/ugolok.png",
+        title: "Уголок серый канализационный Д110 ГР90",
+        price: "335 ₽",
+        alt: "0008"
+    },
+    {
+        imageSrc: "/img/tovary/knaufRotband.png",
+        title: "Knauf Ротбанд, 30 кг",
+        price: "508 ₽",
+        alt: "0009"
+    },
+    {
+        imageSrc: "/img/tovary/samorez.png",
+        title: "Саморез по металлу 3,5х25 мм для гипсокартона",
+        price: "340 ₽",
+        alt: "0010"
+    },
+    {
+        imageSrc: "/img/tovary/SuperFinish.png",
+        title: "Шпатлевка универсальная Danogips SuperFinish 17 л",
+        price: "2 555 ₽",
+        alt: "0011"
+    },
+    {
+        imageSrc: "/img/tovary/knaufSapfir.png",
+        title: "Гипсокартон КНАУФ САПФИР ГСП-DFH3IR 2500х1200х12,5",
+        price: "827 ₽",
+        alt: "0012"
+    },
+    // Добавьте здесь остальные товары, если необходимо
+];
+
+// Создаем и добавляем карточки товаров в контейнер
+popularProductsData.forEach(product => {
+    const card = createPopularProductCard(product.imageSrc, product.title, product.price);
+    popularTovarcontainer.appendChild(card);
+});
