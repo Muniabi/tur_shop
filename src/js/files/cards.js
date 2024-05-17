@@ -140,13 +140,37 @@ const categories = [
         imageSrc: "./img/category/gipsocarton.png"
     },
     {
-        title: "Сухие смеси",
+        title: "Инструменты",
         imageSrc: "./img/catalog/volma-layer.png"
     },
     {
-        title: "Сухие смеси",
+        title: "Для дачи",
         imageSrc: "./img/catalog/volma-layer.png"
-    }
+    },
+    {
+        title: "Окна",
+        imageSrc: "./img/catalog/volma-layer.png"
+    },
+    {
+        title: "Двери",
+        imageSrc: "./img/catalog/volma-layer.png"
+    },
+    {
+        title: "Сантехника",
+        imageSrc: "./img/catalog/volma-layer.png"
+    },
+    {
+        title: "Краски",
+        imageSrc: "./img/catalog/volma-layer.png"
+    },
+    {
+        title: "Электротовары",
+        imageSrc: "./img/catalog/volma-layer.png"
+    },
+    {
+        title: "Интерьер",
+        imageSrc: "./img/catalog/volma-layer.png"
+    },
     // Добавьте здесь остальные категории, если необходимо
 ];
 
