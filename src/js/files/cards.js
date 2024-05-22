@@ -182,6 +182,7 @@ categories.forEach(category => {
 
 
 
+
 // ПОПУЛЯРНЫЕ ТОВАРЫ //
 
 // Функция для создания карточки товара в Популярных товарах
@@ -189,12 +190,13 @@ function createPopularProductCard(imageSrc, title, price, alt) {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("popular-products__card");
 
-    const imageDiv = document.createElement("div");
-    imageDiv.classList.add("item-popular-products__image");
-
+    const linkImage = document.createElement("a");
+    linkImage.href = "#";
+    linkImage.classList.add("item-popular-products__image");
     const image = document.createElement("img");
     image.src = imageSrc;
     image.alt = alt;
+    linkImage.appendChild(image);
 
     const list = document.createElement("ul");
     list.classList.add("popular-products__list", "list-popular-products");
@@ -210,6 +212,13 @@ function createPopularProductCard(imageSrc, title, price, alt) {
     const priceItem = document.createElement("li");
     priceItem.classList.add("list-popular-products__item", "price");
     priceItem.textContent = price;
+    const priceImg = document.createElement("img");
+    priceImg.src = "@img/dop-info.svg";
+    priceImg.alt = "";
+    priceImg.classList.add("info");
+    priceImg.width = "12px";
+    priceImg.height = "12px";
+    priceItem.appendChild(priceImg);
 
     const buttonLink = document.createElement("a");
     buttonLink.href = "#";
@@ -220,8 +229,7 @@ function createPopularProductCard(imageSrc, title, price, alt) {
     list.appendChild(priceItem);
     list.appendChild(buttonLink);
 
-    cardDiv.appendChild(imageDiv);
-    imageDiv.appendChild(image);
+    cardDiv.appendChild(linkImage);
     cardDiv.appendChild(list);
 
     return cardDiv;
@@ -264,7 +272,7 @@ const popularProductsData = [
     },
     {
         imageSrc: "/img/tovary/gipsoKartonKnauf.png",
-        title: "Гипсокартон влагостойкий ГСП-Н2 КНАУФ ",
+        title: "Гипсокартон влагостойкий ГСП-Н2 КНАУФ ",
         price: "557 ₽",
         alt: "0006"
     },
@@ -309,6 +317,7 @@ const popularProductsData = [
 
 // Создаем и добавляем карточки товаров в контейнер
 popularProductsData.forEach(product => {
-    const card = createPopularProductCard(product.imageSrc, product.title, product.price);
+    const card = createPopularProductCard(product.imageSrc, product.title, product.price, product.alt);
     popularTovarcontainer.appendChild(card);
 });
+

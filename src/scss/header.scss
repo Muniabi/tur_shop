@@ -9,6 +9,21 @@
 
     }
 }
+
+.burger {
+    display: none;
+    @media (max-width: 550px) {
+        display: block;
+    }
+}
+
+.catalog {
+    display: block;
+    @media (max-width: 550px) {
+        display: none;
+    }
+}
+
 .top-header {
     padding: 10px 0;
     color: #B2B2B2;
@@ -257,7 +272,6 @@
     }
     &__list {
         display: flex;
-        align-items: center;
         @include adaptiveValue("column-gap", 25, 10);
         @include adaptiveValue("row-gap", 0, 20);
         flex-wrap: wrap;
