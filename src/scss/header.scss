@@ -1,12 +1,10 @@
-.header{
-
+.header {
     &__top {
         background-color: $mainDarkColor;
         color: #fff;
     }
 
-    &__body{
-
+    &__body {
     }
 }
 
@@ -26,7 +24,7 @@
 
 .top-header {
     padding: 10px 0;
-    color: #B2B2B2;
+    color: #b2b2b2;
 
     &__container {
         display: flex;
@@ -35,7 +33,7 @@
         gap: 20px;
         min-height: 22px;
     }
-    
+
     &__menu {
         flex: 1 1 auto;
         @media (max-width: $mobile) {
@@ -43,43 +41,42 @@
         }
     }
 
-    &__location{
+    &__location {
         display: inline-flex;
         align-items: center;
         font-weight: 500;
         column-gap: 8px;
-        
     }
 }
 
-
 .menu {
+    &_icon {
+    }
 
-    &_icon{}
+    &_body {
+    }
 
-    &_body{}
-
-    &__list{
+    &__list {
         display: flex;
         flex-direction: row;
         justify-content: end;
         flex-wrap: wrap;
         row-gap: 5px;
-        @include adaptiveValue("column-gap", 24, 10)
+        @include adaptiveValue("column-gap", 24, 10);
     }
 
-    &__item{
+    &__item {
         &:hover {
             color: $colorAccent;
         }
     }
 
-    &__link{
+    &__link {
         font-weight: 500;
     }
 
-    &__disabled{
-        color: #5D6066;
+    &__disabled {
+        color: #5d6066;
         cursor: not-allowed;
     }
 }
@@ -94,9 +91,9 @@
         z-index: 5;
         span,
         &::before,
-        &::after{
+        &::after {
             content: "";
-            transition: all .3s ease 0s;
+            transition: all 0.3s ease 0s;
             left: 0px;
             position: absolute;
             width: 100%;
@@ -106,12 +103,9 @@
     }
 }
 
-
 .body-header {
     padding-block: 16px;
     background-color: #fff;
-
-    
 
     &__container {
         display: flex;
@@ -139,9 +133,13 @@
         }
     }
 
-    &__catalog{
+    &__catalog {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 10px;
         position: relative;
-        background-color: #3B3B3B;
+        background-color: #3b3b3b;
         font-size: 18px;
         font-weight: 500;
         padding: 14px 20px;
@@ -150,7 +148,6 @@
             color: $colorAccent;
         }
     }
-
 }
 
 .catalog-img {
@@ -159,11 +156,10 @@
 }
 
 .search-header {
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
     border-radius: 8px;
     position: relative;
     flex: 1 1 auto;
-    
 
     &__button {
         position: absolute;
@@ -177,25 +173,25 @@
 
     &__input {
         flex: 1 1 auto;
-        color: #3B3B3B;
+        color: #3b3b3b;
         font-size: 18px;
         font-weight: 500;
         border-radius: 8px;
         height: 47px;
         padding: 12px 16px;
         &::placeholder {
-            color: #8B8D92;
+            color: #8b8d92;
         }
         &:hover {
             &::placeholder {
-                color: #3B3B3B;
+                color: #3b3b3b;
             }
         }
     }
 }
 
 .body-header__actions {
-    color: #3B3B3B;
+    color: #3b3b3b;
 }
 
 .actions-header {
@@ -207,7 +203,6 @@
     @media (max-width: 900px) {
         display: none;
     }
-
 
     &__profile {
         display: flex;
@@ -221,7 +216,7 @@
     }
 
     &__disabled {
-        color: #B2B2B2;
+        color: #b2b2b2;
         cursor: not-allowed;
     }
 
@@ -248,17 +243,15 @@
     }
 }
 
-
 .header__catalog {
-    border: 1px solid #E8E9EA ;
+    border: 1px solid #e8e9ea;
     color: #454950;
     font-size: 15px;
     font-weight: 500;
 }
 .catalog-header {
-
     &__container {
-        min-height:46px;
+        min-height: 46px;
     }
 
     &__menu {
@@ -275,17 +268,13 @@
         @include adaptiveValue("column-gap", 25, 10);
         @include adaptiveValue("row-gap", 0, 20);
         flex-wrap: wrap;
-
     }
     &__item {
         flex: 1 1 auto;
         &:hover {
             color: $colorAccent;
         }
-
     }
     &__link {
     }
-
 }
-

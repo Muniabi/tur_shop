@@ -220,7 +220,7 @@
         flex-wrap: wrap;
         gap: clamp(8px, 10px, 16px);
         @media (max-width: 802px) {
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
     }
 
