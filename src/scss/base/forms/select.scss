@@ -6,16 +6,19 @@
 	// .select__body
 	&__body {
 		position: relative;
+		min-width: toRem(180);
 	}
 	// .select__title
 	&__title {
-		color: inherit;
+		color: #3b3b3b;
 		text-align: left;
-		border: 1px solid #d9d9d9;
+		border: 1px solid #3b3b3b;
 		background-color: #fff;
 		cursor: pointer;
 		width: 100%;
 		border-radius: 4px;
+		font-size: 16px;
+		font-weight: 500;
 	}
 	// .select__value
 	&__value {
@@ -23,21 +26,22 @@
 		min-width: 0;
 		align-items: center;
 		height: toRem(30);
-		padding: 0 toRem(15);
+		padding: 0 toRem(25) 0 toRem(15);
 		gap: toRem(10);
 		> * {
 			flex: 1 1 auto;
 		}
 		&:after {
-			content: "";
+			content: ">";
 			align-self: stretch;
 			flex: 0 0 10px;
 			transition: all 0.3s ease 0s;
 			display: flex;
+			transform: rotate(90deg);
 			justify-content: center;
 			align-items: center;
 			._select-open & {
-				transform: rotate(-180deg);
+				transform: rotate(-90deg);
 			}
 		}
 		&._select-pseudo-label {
@@ -68,7 +72,7 @@
 	}
 	// .select__options
 	&__options {
-		color: #000;
+		color: #8b8d92;
 		position: absolute;
 		top: calc(100% - toRem(1));
 		border-radius: 0 0 4px 4px;
@@ -76,7 +80,7 @@
 		left: 0;
 		background-color: #fff;
 		border-top: 0;
-		border: 1px solid #d9d9d9;
+		border: 1px solid #8b8d92;
 		border-top: 0;
 		padding: 10px 0px 5px 0px;
 	}

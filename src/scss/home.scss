@@ -328,7 +328,6 @@
     &__card {
         flex: 1 1 calc(50% - 10px); /* Устанавливаем ширину карточки для двух колонок */
         max-width: 278px;
-        width: 25%;
         color: #2f323a;
         border: 1px solid #e8e9ea;
         border-radius: 8px;
@@ -425,72 +424,72 @@
         }
     }
 
-    .price {
-        margin-block: 12px 16px;
-        font-size: clamp(18px, 1.5vw, 20px);
-        font-weight: 700;
-    }
-
-    .item-popular-products {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        height: 100%;
-
-        // &__image {
-        //     align-content: center;
-        //     margin: 0 auto;
-        //     margin-bottom: 16px;
-        //     img {
-        //         max-width: 275px;
-        //         height: auto;
-        //         max-height: 228px;
-        //         transition: .4s ease;
-        //     }
-        // }
-
-        &__image img {
-            width: 100%; /* Сделаем изображение внутри карточки занимающим всю доступную ширину */
-            height: auto; /* Автоматическая высота для сохранения пропорций */
-        }
-    }
-
-    .list-popular-products {
-        &__item {
-            display: flex;
-            flex-direction: row;
-            column-gap: 5px;
-            align-items: center;
-            height: 100%;
-            justify-content: center;
-        }
-
-        &__title {
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 1.5;
-            padding-bottom: 40px;
-            transition: 0.2s ease;
-            /* Стили для устройств, поддерживающих наведение */
-            @media (hover: hover) {
-                &:hover {
-                    color: $colorAccent; /* замените $colorAccent на нужный вам цвет */
-                }
-            }
-            /* Альтернативные стили для мобильных устройств */
-            @media (hover: none) {
-                &:active {
-                    color: $colorAccent; /* замените $colorAccent на нужный вам цвет */
-                }
-            }
-        }
-    }
-
     &__button {
         margin-top: 16px;
         width: 100%; /* растягиваем кнопку на всю доступную ширину блока */
         border-radius: 15px;
         align-self: flex-end; /* перемещаем кнопку вниз блока */
+    }
+}
+
+.list-popular-products {
+    &__item {
+        display: flex;
+        flex-direction: row;
+        column-gap: 5px;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5;
+        padding-bottom: 40px;
+        transition: 0.2s ease;
+        /* Стили для устройств, поддерживающих наведение */
+        @media (hover: hover) {
+            &:hover {
+                color: $colorAccent; /* замените $colorAccent на нужный вам цвет */
+            }
+        }
+        /* Альтернативные стили для мобильных устройств */
+        @media (hover: none) {
+            &:active {
+                color: $colorAccent; /* замените $colorAccent на нужный вам цвет */
+            }
+        }
+    }
+}
+
+.price {
+    margin-block: 12px 16px;
+    font-size: clamp(18px, 1.5vw, 20px);
+    font-weight: 700;
+}
+
+.item-popular-products {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+
+    // &__image {
+    //     align-content: center;
+    //     margin: 0 auto;
+    //     margin-bottom: 16px;
+    //     img {
+    //         max-width: 275px;
+    //         height: auto;
+    //         max-height: 228px;
+    //         transition: .4s ease;
+    //     }
+    // }
+
+    &__image img {
+        width: 200px; /* Сделаем изображение внутри карточки занимающим всю доступную ширину */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
     }
 }
 

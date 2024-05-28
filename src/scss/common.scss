@@ -1,1 +1,71 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.breadcrumbs {
+    white-space: nowrap;
+    overflow: auto;
+    height: 24px;
+    &__list {
+        display: flex;
+    }
+    &__item {
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        color: #454950;
+        &::after {
+            content: ">";
+            font-size: 16px;
+            margin: 0px 6px;
+        }
+    }
+    &__current {
+        color: #454950;
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: clamp(30px, 4.1vw, 48px);
+    line-height: 1.2;
+    color: $mainDarkColor;
+    margin-top: 20px;
+    &:not(:last-child) {
+        margin-top: 40px;
+    }
+}
+
+.pagging {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: toRem(16);
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: toRem(14);
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        height: 52px;
+        border: 1px solid #e8e9ea;
+        color: #2f323a;
+        border-radius: 8px;
+        &:active {
+            color: $colorAccent;
+            background-color: $mainDarkColor;
+        }
+        &:hover {
+            color: $colorAccent;
+            background-color: $mainDarkColor;
+        }
+        &:disabled {
+            color: #154b80;
+            cursor: none;
+        }
+    }
+}

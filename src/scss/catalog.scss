@@ -1,0 +1,23 @@
+.catalog {
+    &__body {
+        display: grid;
+        grid-template-columns: toRem(278) 1fr;
+        gap: toRem(20);
+    }
+
+    &__control {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: toRem(20);
+    }
+
+    &__products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(toRem(220), toRem(278)));
+        gap: 10px;
+    }
+
+    &__footer {
+        
+    }
+}
